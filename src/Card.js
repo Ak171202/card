@@ -1,6 +1,7 @@
 import "./card.css";
 
 export default function Card(props) {
+    console.log(props)
     return <div className="col-lg-4">
     <div className="container-fluid">
 
@@ -12,21 +13,21 @@ export default function Card(props) {
                         <div class="col-lg-12">
                             <div class="card mb-5 mb-lg-0">
                                 <div class="card-body">
-                                    <h5 class="card-title text-muted text-uppercase text-center">{props.free}</h5>
-                                    <h6 class="card-price text-center">{props.price}<span class="period">/month</span></h6>
+                                    <h5 class="card-title text-muted text-uppercase text-center">{props.data.free}</h5>
+                                    <h6 class="card-price text-center">{props.data.price}<span class="period">/month</span></h6>
                                     <hr />
                                     <ul class="fa-ul">
-                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>{props.user}</li>
-                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>{props.stor}</li>
-                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>{props.proj}</li>
-                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>{props.access}</li>
-                                        <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>{props.size}
+                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>{props.data.user}</li>
+                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>{props.data.stor}</li>
+                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>{props.data.proj}</li>
+                                        <li><span class="fa-li"><i class="fas fa-check"></i></span>{props.data.access}</li>
+                                        <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>{props.data.size}
                                             </li>
-                                        <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>{props.line}
+                                        <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>{props.data.line}
                                             </li>
-                                        <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>{props.dom}
+                                        <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>{props.data.dom}
                                         </li>
-                                        <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>{props.sts}
+                                        <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>{props.data.sts}
                                            </li>
                                     </ul>
                                     <div class="d-grid">
